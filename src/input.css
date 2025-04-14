@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+#containers {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 90vh;
+}
+#search-container {
+grid-row: 1 / 4;
+grid-column: 1 / 2;
+display: flex;
+flex-direction: column;
+}
+#current-weather{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    background-image:linear-gradient(to bottom right, #75cee7, #0072ff);
+    font-weight: bold;
+    
+    font-family: sans-serif;
+    
+}
+#five-day-forecast{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-image:linear-gradient(to top right, #75cee7, #0072ff);
+   align-items: center;
+    
+}
+.forecast{
+    
+    width:300px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #75cee7;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    
+
+}
+svg{
+    width: 30px;
+    height: 30px;
+    display: inline;
+    margin-bottom: 3px;
+    
+}
+
+#recent-div{
+    
+    border-radius: 20px;
+    padding: 10px;
+   
+    cursor: pointer;
+}
+#recent-div:hover{
+    background-color: #75cee7;
+    color: #fff;
+}
+.search-item{
+    background-color: darkgray;
+    padding-left: 4px;
+    margin-top: 4px;
+    border-radius: 10px;
+    
+}
+.search-item:hover{
+    background-color: #75cee7;
+    color: #fff;
+}
+#recent-div{
+    display: none ;
+}
+p{
+    
+   
+    font-family: sans-serif;
+    
+}
+#recent-searches{
+    display: none;
+}
+.search-item{
+   display: block;
+    width: 100px;
+    height: 30px;
+   text-align: center;
+    justify-self: center;
+    margin: 4px;
+}
+
+

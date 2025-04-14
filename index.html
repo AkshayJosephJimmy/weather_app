@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="src/output.css" rel="stylesheet">
+    
+   
+      
+</head>
+<body>
+    <header class="bg-blue-500 text-white p-4 text-center h-20">
+        <h1 >Weather App</h1>
+    </header>
+    <main>
+        <div id="containers" >
+            <div id="search-container" class="border-2 border-gray-300 rounded-lg p-4 m-4 ">
+               <label for="search"  >Enter a City </label> <input type="text" class="bg-gray-300 border-blue-500 " id="search">
+               <div id="suggestion-box"></div> 
+               <button id="submit-city" class="bg-blue-500 mt-4 w-500px">Search</button>
+               <p class="self-center">or</p>
+               <button id="current-button" class="bg-gray-300 mt-4 w-500px">Use current Location</button>
+                
+               <div  id="recent-div"class="self-center mt-50">
+               
+                <p class="inline ml-2">Recent Searches</p>
+                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m16.843 10.211c.108-.141.157-.3.157-.456 0-.389-.306-.755-.749-.755h-8.501c-.445 0-.75.367-.75.755 0 .157.05.316.159.457 1.203 1.554 3.252 4.199 4.258 5.498.142.184.36.29.592.29.23 0 .449-.107.591-.291 1.002-1.299 3.044-3.945 4.243-5.498z"/></svg>
+
+               </div>
+                <div id="recent-searches">
+                    <ul id="search-list" >
+                        
+                       
+                        
+                    
+                    </ul>
+                </div>
+
+               
+
+            </div>
+            <div id="current-weather"  class="border-2 border-gray-300 rounded-lg p-4 m-4 flex flex-row justify-between "> 
+                <section>
+                    <h2 id="location">Location</h2>
+                <p id="temperature">Temperature: </p>
+                <p id="wind">Wind: </p>
+                <p id="humidity">Humidity: </p>
+                </section>
+                
+                <figure class="self-center">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </figure>
+                
+                
+
+            </div>
+            <section id="five-day-forecast"  class="border-2 border-gray-300 rounded-lg p-4 m-4 ">
+                <div class="forecast">
+                    <p class="date">Date</p>
+                    <p class="temperature">Temperature: </p>
+                    <p class="wind">Wind: </p>
+                    <p class="humidity">Humidity:</p>
+                    <img class="weather-icon" src="" alt="Weather Icon">
+
+                </div>
+                <div class="forecast">
+                    <p class="date">Date</p>
+                    <p class="temperature">Temperature: </p>
+                    <p class="wind">Wind: </p>
+                    <p class="humidity">Humidity: </p>
+                    <img class="weather-icon" src="" alt="Weather Icon">
+
+                </div>
+                <div class="forecast">
+                    <p class="date">Date</p>
+                    <p class="temperature">Temperature: </p>
+                    <p class="wind">Wind: </p>
+                    <p class="humidity">Humidity: </p>
+                    <img class="weather-icon" src="" alt="Weather Icon">
+
+                </div>
+                <div class="forecast">
+                    <p class="date">Date</p>
+                    <p class="temperature">Temperature: </p>
+                    <p class="wind">Wind: </p>
+                    <p class="humidity">Humidity: </p>
+                    <img class="weather-icon" src="" alt="Weather Icon">
+
+                </div>
+                <div class="forecast">
+                    <p class="date">Date</p>
+                    <p class="temperature">Temperature: </p>
+                    <p class="wind">Wind: </p>
+                    <p class="humidity">Humidity: </p>
+                    <img class="weather-icon" src="" alt="Weather Icon">
+
+                </div>
+
+
+            </section>
+
+        </div>
+
+
+    </main>
+    <script src="src/app.js"></script>
+</body>
+</html>
