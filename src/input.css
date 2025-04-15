@@ -86,11 +86,14 @@ p{
 }
 #recent-searches{
     display: none;
+    max-height: 200px;
+    overflow-y: scroll;
 }
 .search-item{
    display: block;
-    width: 100px;
-    height: 30px;
+    width: auto;
+    height: auto;
+    padding: 5px;
    text-align: center;
     justify-self: center;
     margin: 4px;

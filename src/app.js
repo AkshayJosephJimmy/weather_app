@@ -59,18 +59,20 @@ function getApi(){
 
         })
 
-        recentDiv.addEventListener("click",()=>{
-          if(recentSearches.style.display==="none"){
-            recentSearches.style.display="block";
-          }else{
-            recentSearches.style.display="none";
-          }
-
-        })
-
-
+       
 
 }
+recentDiv.addEventListener("click",()=>{
+          
+  if(recentSearches.style.display==="block"){
+    recentSearches.style.display="none";
+    
+  }else{
+    recentSearches.style.display="block";
+    
+  }
+
+})
 searchCity.addEventListener('input',autoCorrect);
 function autoCorrect(){
   const input=searchCity.value.trim();
