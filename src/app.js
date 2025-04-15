@@ -11,6 +11,7 @@ const apiKey="9c4260a5becc413596e111024250804";
 const suggestion=document.querySelector("#suggestion-box");
 const recentSearches=document.querySelector("#recent-searches");
 const recentDiv=document.querySelector("#recent-div");
+const currLocationBtn=document.querySelector("#current-button");
 
 let timeout;
 
@@ -112,6 +113,37 @@ function autoCorrect(){
    },300)
 
 }
+currLocationBtn.addEventListener("click",getCurrentLocation);
+function getCurrentLocation(){
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition((position)=>{
+      const lat=position.coords.latitude;
+      const lon=position.coords.longitude;
+      fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=6`)
+      .then((response)=>response.json())
+      .then((data)=>{
+        weatherData=data;
+        console.log(weatherData);
+        currLoc.innerHTML=`${weatherData.location.name}`;
+        temp.innerHTML=`${weatherData.current.temp_c}°C`
+        windSpeed.innerHTML=`Wind Speed: ${weatherData.current.wind_kph} km/h`
+        humidity.innerHTML=`Humidity: ${weatherData.current.humidity}%`
+        weatherIcon.setAttribute("src",`${weatherData.current.condition.icon}`);
+        for(let i=0;i<forecastDiv.length;i++){
+          forecastDiv[i].children[0].innerHTML=`${weatherData.forecast.forecastday[i+1].date}`;
+          forecastDiv[i].children[1].innerHTML=`Temperature:${weatherData.forecast.forecastday[i+1].day.avgtemp_c}°C`;
+          forecastDiv[i].children[2].innerHTML=`Wind:${weatherData.forecast.forecastday[i+1].day.maxwind_kph} km/h`;
+          forecastDiv[i].children[3].innerHTML=`Humidity:${weatherData.forecast.forecastday[i+1].day.avghumidity}%`;
+          forecastDiv[i].children[4].setAttribute("src",`${weatherData.forecast.forecastday[i+1].day.condition.icon}`);
+        }
+      })
+    })
+  }
+  else{
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
 
 
 
