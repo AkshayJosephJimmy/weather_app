@@ -12,8 +12,6 @@
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-extrabold: 800;
@@ -326,6 +324,33 @@ p {
 button:hover {
   scale: 1.05;
   transition: all 0.1s ease-out;
+}
+@media (max-width:1250px) {
+  #five-day-forecast {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 768px) {
+  .forecast {
+    height: 150x;
+    width: 170px;
+  }
+  #search-container {
+    grid-row: 1 / 2;
+  }
+  #five-day-forecast {
+    grid-column: 1/4;
+  }
+  #recent-div {
+    align-self: flex-start;
+    margin-top: 0;
+  }
+  #search-container {
+    max-height: 500px;
+  }
 }
 @property --tw-font-weight {
   syntax: "*";

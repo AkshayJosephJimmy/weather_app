@@ -99,5 +99,38 @@ button:hover{
     scale: 1.05;
     transition: all 0.1s ease-out;
 }
+@media (max-width:1250px){
+    #five-day-forecast{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+       overflow-y: scroll;
 
+    }
+}
+@media (max-width: 768px) {
+   
+    .forecast{
+        height: 150x;
+        width: 170px;
+    }
+    #search-container {
+        grid-row: 1 / 2;
+        
+        
+        }
+        #five-day-forecast{
+            grid-column: 1/4;
+           
+            
+        }
+        #recent-div{
+            align-self: flex-start;
+            margin-top: 0;
+        }
+        #search-container{
+            max-height: 500px;
+            
+        }
+}
 
