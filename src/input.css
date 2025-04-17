@@ -64,13 +64,7 @@ svg{
     background-color: #75cee7;
     color: #fff;
 }
-.search-item{
-    background-color: darkgray;
-    padding-left: 4px;
-    margin-top: 4px;
-    border-radius: 10px;
-    
-}
+
 .search-item:hover{
     background-color: #75cee7;
     color: #fff;
@@ -96,7 +90,14 @@ p{
     padding: 5px;
    text-align: center;
     justify-self: center;
-    margin: 4px;
+    background-color: darkgray;
+    padding-left: 4px;
+    margin-top: 4px;
+    border-radius: 10px;
+}
+button:hover{
+    scale: 1.05;
+    transition: all 0.1s ease-out;
 }
 
 
